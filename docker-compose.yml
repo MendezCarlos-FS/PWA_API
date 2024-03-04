@@ -1,0 +1,12 @@
+services:
+  pwa-node:
+    image: node:latest
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - 3000:3000
+    restart: always
+    tty: true
+    stdin_open: true
+    command: sh -c "rm -rf /home/node/app/node_modules && npm install && npm run dev"
