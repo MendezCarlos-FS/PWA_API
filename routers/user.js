@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
 const userCtrl = require("../controllers/user.js");
-const { validateEmail, validatePhone, validateName, validateBirthday, validatePassword } = require("../middlewares/utils.js");
+const { validateEmail, validatePhone, validateName, validateBirthday, validatePassword } = require("@mendezcarlos-fs/utils");
 
 // create application/json parser
 const jsonParser = bodyParser.json();
